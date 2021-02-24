@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/broadcastListFragment">
+
+    <fragment
+        android:id="@+id/broadcastListFragment"
+        android:name="jp.castify.demo.app.BroadcastListFragment"
+        android:label="fragment_broadcast_list"
+        tools:layout="@layout/fragment_broadcast_list" >
+        <action
+            android:id="@+id/action_broadcastListFragment_to_broadcastFragment"
+            app:destination="@id/broadcastFragment" />
+        <action
+            android:id="@+id/action_broadcastListFragment_to_playerFragment"
+            app:destination="@id/playerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/broadcastFragment"
+        android:name="jp.castify.demo.app.BroadcastFragment"
+        android:label="fragment_broadcast"
+        tools:layout="@layout/fragment_broadcast" />
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="jp.castify.demo.app.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" >
+        <argument
+            android:name="broadcastId"
+            app:argType="string" />
+    </fragment>
+</navigation>
