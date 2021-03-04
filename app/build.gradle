@@ -68,5 +68,5 @@ dependencies {
     implementation group: 'androidx.lifecycle', version: ax_lifecycleVersion, name: 'lifecycle-runtime-ktx'
     implementation group: 'androidx.lifecycle', version: ax_lifecycleVersion, name: 'lifecycle-livedata-ktx'
 
-    implementation group: 'jp.castify', name: 'castify-sdk', version: '1.0.0-RC.1'
+    implementation group: 'jp.castify', name: 'castify-sdk', version: '1.0.0-RC.2'
 }
