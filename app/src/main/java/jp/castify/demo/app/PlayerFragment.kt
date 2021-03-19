@@ -36,7 +36,7 @@ class PlayerFragment : Fragment(), Player.Callback, SeekBar.OnSeekBarChangeListe
   private val player by lazy {
     requireContext()
       .app.castifyApp
-      .newPlayer()
+      .newPlayer(Player.Config(lowLatency = false))
   }
 
   data class TimeValue(
